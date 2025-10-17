@@ -18,8 +18,9 @@ def load_model():
     
     # 手动指定模型存储路径
     model_path = "./models"  # 您可以修改为任意路径
+    
     # 根据实际情况，选择使用CPU还是GPU
-    model = whisper.load_model("medium", download_root=model_path, device="cpu")
+    model = whisper.load_model("medium", download_root=model_path)
     
     load_time = time.time() - start_time
     print(f"模型加载完成，耗时: {str(datetime.timedelta(seconds=load_time))}")
